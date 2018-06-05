@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+      <title>EventPlanner</title>
+      <link rel="shortcut icon" type="image/png" href="assets/img/logo_bisnis.png">
+      <link rel="stylesheet" href="assets/css/chat1.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      
+<header class="large">
+  <div class="container">
+    <nav>
+      <a href="http://uixdesignstudio.com"><img class="logo" src="assets/img/logo.png" style="height: 50px"></a> 
+      <ul>
+        <li><a href="home.html"">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teamates.html">Teamates</a></li>
+        <li><a href="news.html">News</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="stretch">
+  <p>kosong</p>
+  <p class="bottom">kosong.</p>
+
+  <script>
+  $(document).on("scroll", function() {
+
+  if($(document).scrollTop()>100) {
+    $("header").removeClass("large").addClass("small");
+  } else {
+    $("header").removeClass("small").addClass("large");
+  }
+  
+});
+</script> 
+</section>
+
+
+<title>Chat For Event Planner </title>
+<link rel="stylesheet" type="text/css" href="assets/css/chat2.css">
+<script src="assets/js/jquery-chat.min.js"></script>
+<script src="assets/js/chat2.js"></script>
+</head>
+<body>
+<div class="chat_box">
+<div class="chat_head">Chat for Team</div>
+<div class="chat_body">
+<div class="user">Okta Wahyudi </div>
+<div class="user">Pupung Handoko </div>
+<div class="user">Melfan Affandi </div>
+
+</div>
+</div>
+
+<div class="msg_box" style="right: 190px">
+<div class="msg_head">User Event Planner
+<div class="close">x</div></div>
+<div class="msg_wrap">
+<div class="msg_body">
+<div class="msg_a"><b>Mantan</b></div>
+<div class="msg_b"><b>Pacar Baru</b></div>
+<div class="msg_insert"></div>
+</div>
+<div class="msg_footer">
+<textarea rows="2" class="msg_input" placeholder="Press Enter to send Message"></textarea>
+</div>
+</div>
+</div>
+</body>
+</html>
+

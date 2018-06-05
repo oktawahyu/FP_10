@@ -1,0 +1,6 @@
+Reference :
+https://www.w3schools.com/
+https://angular.io/
+https://www.youtube.com/watch?v=EydAzpcjz10
+
+https://medium.com/skyshidigital/apa-itu-bootstrap-cd8ffab57628

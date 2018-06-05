@@ -1,0 +1,14 @@
+#map {
+    height:420px;
+    margin-top: 10px;
+    padding-top: -100px;
+}
+.infoWindowContent {
+    font-size:  14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 1px;
+}
+h2 {
+    margin-bottom: auto;
+    margin-top: auto;
+}

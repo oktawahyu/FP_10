@@ -1,0 +1,31 @@
+html,body{font:14px arial,verdana,san-serif;}
+.container{
+    display:table;
+    width:400px;
+    border-collapse:collapse;
+    margin:0 auto;
+    line-height:25px;
+}
+.table-row:hover{background-color:#99ccff;}
+.heading{
+    font-weight:bold;
+    display:table-row;
+    background-color:#C91622;
+    text-align:center;
+    line-height:35px;
+    color:#ffffff;
+}
+.table-row{  
+    display:table-row;
+    text-align:center;
+}
+.strip{  
+    display:table-row;
+    text-align:center;
+    background-color:#f0f0f0;
+}
+.col{ 
+    display:table-cell;
+    border:1px solid #CCC;
+}
+

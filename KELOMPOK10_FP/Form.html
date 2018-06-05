@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+	<title></title>
+      <link rel="stylesheet" href="assets/css/Form.css">
+      <link rel="shortcut icon" type="image/png" href="assets/img/logo_bisnis.png">
+      <script src="assets/js/angular-animate.js"></script>
+      <script src="assets/js/angular.js"></script>
+      <script src="assets/js/angular-touch.js"></script>
+      <script src="assets/js/angular-route.js"></script>
+      <script src="assets/js/angular.controller.js"></script>
+
+      
+
+  <script type="text/javascript">
+    function post() {
+      comment=document.getElementById('firstname').value;
+      localStorage.setItem("datafirstname", comment);
+      window.location="formlocal.html";
+
+      comment=document.getElementById('lastname').value;
+      localStorage.setItem("datalastname", comment);
+      window.location="formlocal.html";
+
+      comment=document.getElementById('lastname').value;
+      localStorage.setItem("datalastname", comment);
+      window.location="formlocal.html";
+
+      comment=document.getElementById('event').value;
+       localStorage.setItem("dataevent", comment);
+      window.location="formlocal.html";   
+
+      comment=document.getElementById('date').value;
+      localStorage.setItem("datadate", comment);
+      window.location="formlocal.html";
+      comment=document.getElementById('subject').value;
+      localStorage.setItem("datasubject", comment);
+      window.location="formlocal.html";
+
+    }
+  </script>
+      
+      
+<header class="large" >
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <img class="logo" src="assets/img/logo.png" style="height: 50px"></a> 
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teamates.html">Teamates</a></li>
+        <li><a href="news.html">News</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="stretch">
+
+  <script>
+  $(document).on("scroll", function() {
+
+  if($(document).scrollTop()>100) {
+    $("header").removeClass("large").addClass("small");
+  } else {
+    $("header").removeClass("small").addClass("large");
+  }
+  
+});
+</script>
+</section>	
+</head>
+<body ng-app="" >
+<br>
+<div class="body">
+	<div class="konten">
+		<div class="kepala">
+			<h2 class="judul">FORM EVENT PLANNER</h2>
+		</div>
+		<div class="container">
+		<br>
+  
+
+    <label for="firstname">First Name
+    <input type="text" id="firstname" name="firstname" placeholder="Your name.."></label><br><br>
+
+    <label for="lastname">Last Name
+    <input type="text" id="lastname" name="lastname" placeholder="Your last name.."></label><br><br>
+
+
+<form>
+  Select Your Gender:<br>
+  <input id="gender"type="radio" ng-model="myVar" value="Male">Male
+  <input id="gender2"type="radio" ng-model="myVar" value="Female">Female
+</form><br>
+
+<form>
+  Select an Event:
+  <select id="event" ng-model="myVar">
+    <option value="">
+    <option value="Business">Business
+    <option value="Games">Games
+    <option value="Sport">Sport
+    <option value="University">University
+    <option value="Tech">Tech
+  </select>
+</form>
+
+<div  ng-switch="myVar">
+  <div ng-switch-when="Business"><br>
+     <h3>Business</h3>
+     <p><font size=2>Sebuah perkumpulan pebisnis yang saling sahring tentang bisnis mereka.</font></p>
+  </div>
+  <div ng-switch-when="Games"><br>
+     <h3>Games</h3>
+     <p><font size=2>Sebuah perkumpulan anak muda atau orang tua yang memiliki hobi di bidang game.</font></p>
+  </div>
+  <div ng-switch-when="Sport"><br>
+     <h3>Sport</h3>
+     <p><font size=2>Sebuah perkumpulan anak muda atau orang tua yang memiliki hobi di bidang olahraga.</font></p>
+  </div>
+  <div ng-switch-when="University"><br>
+     <h3>University</h3>
+     <p><font size=2>Sebuah perkumpulan mahasiswa yang saling berdiskusi tentang suatu bidang tertentu.</font></p>
+  </div>
+  <div ng-switch-when="Tech"><br>
+     <h3>Tech</h3>
+     <p><font size=2>Sebuah perkumpulan anak muda atau orang tua yang memiliki hobi di bidang teknologi.</font></p>
+  </div>
+</div><br>
+	
+	<label for="date">Date
+  <input type="text" id="date" name="firstname" placeholder="Date/Mounth/Years - example 17/10/1997 "></label>
+<br><br>
+    <label for="subject">Descriptive Event</label>
+    <textarea id="subject" name="subject" placeholder="Write your descriptive.." style="height:100px"></textarea>
+    <input type="submit" onclick="post()" value="SUBMIT"><br>
+  </option>
+</option>
+</option>
+</option>
+</option>
+</option>
+
+
+</div>
+</body>
+
+</html>
