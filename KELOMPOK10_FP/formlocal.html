@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="assets/css/Form.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="assets/js/angular.js"></script>
+      <link rel=”stylesheet” type=”text/css” href=”assets/js/jquery-ui-1.12.1/jquery-ui.css”>
+      <script src=”assets/js/jquery-ui-1.12.1/external/jquery/jquery.js”></script>
+      <script src=”assets/js/jquery-ui-1.12.1/jquery-ui.js”></script>
+      <script src=”assets/js/jquery-ui-1.12.1/jquery-ui.min.js”></script>
+      <link rel=”stylesheet” type=”text/css” href=”assets/js/jquery-ui-1.12.1/jquery-ui.theme.css”>
+      <link rel="stylesheet" type="text/css" href="assets/css/tbl.css">
+      <link rel="shortcut icon" type="image/png" href="assets/img/logo_bisnis.png">
+
+
+
+	    
+	<script type="text/javascript">
+		function loadScript(){			
+			document.getElementById('postfirstname').innerHTML= localStorage.getItem("datafirstname");
+			document.getElementById('postlastname').innerHTML= localStorage.getItem("datalastname");
+			document.getElementById('postevent').innerHTML= localStorage.getItem("dataevent");
+			document.getElementById('postdate').innerHTML= localStorage.getItem("datadate");
+			document.getElementById('postsubject').innerHTML= localStorage.getItem("datasubject");
+		
+		}		
+</script>
+
+<header class="large">
+  <div class="container">
+    <nav>
+     <img class="logo" src="assets/img/logo.png" style="height: 50px"></a> 
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teamates.html">Teamates</a></li>
+        <li><a href="news.html">News</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="stretch">
+
+  <script>
+  $(document).on("scroll", function() {
+
+  if($(document).scrollTop()>100) {
+    $("header").removeClass("large").addClass("small");
+  } else {
+    $("header").removeClass("small").addClass("large");
+  }
+  
+});
+</script>
+</section>	
+</head>
+<body ng-app="">
+<br>
+<div class="body">
+	<div class="konten">
+		<div class="kepala">
+  
+			<CENTER><h2 class="judul"><font color= "#28a45e" ><b>SUKSES CREATE FORM !<b></font></h2></CENTER><br>
+		</div>
+		<div class="container">
+<body>
+<body onload="loadScript()">
+<table cellspacing='0'>
+	<table>
+  <tbody>
+  	 <tr>
+      <th><b>First Name</th>
+      <td><div id="postfirstname"></div></td>
+      </tr>
+    <tr>
+     
+      <th><b>Last Name</th>
+      <td><div id="postlastname"></div></td>
+      </tr>
+    <tr>
+     
+      <th><b>Event that will be held</th>
+      <td><div id="postevent"></div></td>
+      </tr>
+    <tr>
+     
+      <th><b>Date</th>
+      <td><div id="postdate"></div></td>
+      </tr>
+     <tr>
+   
+      <th>Subject</th>
+      <td><div id="postsubject"></div></td>
+      </tr>
+    </tbody>
+    </table>
+
+	<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5%;
+    width: 100%;
+    padding-top: 1%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>@Copyright : @Team10-final project</p>
+</div>
+
+   
+</html>
+
+
+
+     
+ 
+     
+
+      
+

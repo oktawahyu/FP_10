@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>EventPlanner</title>
+	 <link rel="stylesheet" href="assets/css/succes.css">
+   <link rel="shortcut icon" type="image/png" href="assets/img/logo_bisnis.png">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      
+<header class="large">
+  <div class="container">
+    <nav>
+      <img class="logo" src="assets/img/logo.png" style="height: 50px"></a> 
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teamates.html">Teamates</a></li>
+        <li><a href="news.html">News</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="stretch">
+
+  <script>
+  $(document).on("scroll", function() {
+
+  if($(document).scrollTop()>100) {
+    $("header").removeClass("large").addClass("small");
+  } else {
+    $("header").removeClass("small").addClass("large");
+  }
+  
+});
+</script>
+</section>
+      
+	
+</head>
+<body>
+<h1><font color=white size=9><u>SUCCESS </u></font></h1>
+<br>
+<h3><font color=white>Your Message Has Been Sent</font><h3>
+
+</body>
+</html>

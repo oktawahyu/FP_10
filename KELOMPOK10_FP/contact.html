@@ -1,0 +1,185 @@
+<html ng-app="mapsApp">
+<meta charset="utf-8">
+
+
+<meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width">
+	<title></title>
+	<link rel="stylesheet" href="assets/css/kontak.css">
+  <link rel="shortcut icon" type="image/png" href="assets/img/logo_bisnis.png">
+	
+	 <title>EventPlanner</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="assets/js/angular.js"></script>
+      
+      
+<header class="large">
+  <div class="container">
+    <nav>
+      <img class="logo" src="assets/img/logo.png" style="height: 50px"></a> 
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teamates.html">Teamates</a></li>
+        <li><a href="news.html">News</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="stretch">
+
+  <script>
+  $(document).on("scroll", function() {
+
+  if($(document).scrollTop()>100) {
+    $("header").removeClass("large").addClass("small");
+  } else {
+    $("header").removeClass("small").addClass("large");
+  }
+  
+});
+</script>
+</section>
+      
+
+  <link rel="stylesheet" href="assets/css/maps.css">
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDau-FKtWQApNrIZcm-xadEJtrr7I9j51o&callback=myMap"></script>
+    <script type="text/javascript" src="assets/js/angular.js"></script>
+</head>
+<body>
+<br>
+<div class="body">
+	<div class="konten">
+		<div class="kepala">
+			<h2 class="judul">CONTACT</h2>
+		</div>
+		<div class="container">
+		<br>
+  
+
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Your name.."><br><br>
+
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Your last name.."><br><br>
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value=" "> </option>
+      <option value="Indonesia">Indonesia</option>
+      <option value="Malaysia">Malaysia</option>
+      <option value="Singapore">Singapore</option>
+      <option value="Kamboja">Kamboja</option>
+      <option value="Thailand">Thailand</option>
+      <option value="Vietnam">Vietnam</option>
+      <option value="Brunei Darusalam">Brunei Darusalam</option>
+    </select><br><br>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write your message.." style="height:100px"></textarea>
+
+<div ng-app="">
+  <form>
+      Check If Your Identity Is Correct:
+      <input type="checkbox" ng-model="myVar">
+  </form>
+
+  <h1 ng-show="myVar">Thank You</h1>
+</div>
+  <form action="succes.html">
+    <input type="submit" value="Submit" onclick="msg()"><br><br>
+
+  </form>
+  <script>
+    function msg(){
+      alert("Your message has been sent");
+    }
+  </script>
+
+</div>
+		<h1 class="text">Project Planner</h1>
+		<div class="images5"></div>
+		<div class="images1">
+			<h4 class="text">085567486558</h4>
+		</div>
+		<div class="images2">
+			<h4 class="text">@Project_Planner</h4>
+		</div>
+		<div class="images3">
+			<h4 class="text">@Project_Planner</h4>
+		</div>
+		<div class="images4">
+			<h4 class="text">Project_Planner</h4>
+		
+</div>
+<br> 
+<br>
+<p><center><font style="font-size: 20px;"><b>OUR LOCATION ! </b></font></p></center>
+ <div id="googleMap" style="width:100%;height:30px;"></div>
+<div ng-app="mapsApp" ng-controller="MapCtrl">
+    <div id="map"></div> 
+    <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript">
+    var cities = [
+    {
+        Place : 'Amikom University',
+        lat : -7.7580342,
+        long : 110.4023268
+    }
+
+];
+angular.module('mapsApp', [])
+.controller('MapCtrl', function ($scope) {
+
+    var mapOptions = {
+        zoom: 4,
+        center: new google.maps.LatLng(-7.7580342, 110.4023268),
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+    }
+
+    $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    $scope.markers = [];
+    
+    var infoWindow = new google.maps.InfoWindow();
+    
+    var createMarker = function (info){
+        
+        var marker = new google.maps.Marker({
+            map: $scope.map,
+            position: new google.maps.LatLng(info.lat, info.long),
+            title: info.city
+        });
+        marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
+        
+        google.maps.event.addListener(marker, 'click', function(){
+            infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+            infoWindow.open($scope.map, marker);
+        });
+        
+        $scope.markers.push(marker);
+        
+    }  
+    
+    for (i = 0; i < cities.length; i++){
+        createMarker(cities[i]);
+    }
+
+    $scope.openInfoWindow = function(e, selectedMarker){
+        e.preventDefault();
+        google.maps.event.trigger(selectedMarker, 'click');
+    }
+
+});
+
+</script>
+</html>

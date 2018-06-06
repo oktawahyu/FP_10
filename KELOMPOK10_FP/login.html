@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/logo_bisnis.png">
+	<script src="assets/js/angular.js"></script>  
+</head>
+<body>
+
+
+<form ng-app="myApp" ng-controller="validateCtrl" 
+name="myForm" novalidate>
+
+<div class = "images"></div>
+    <div class="konten">
+        <div class="kepala">
+            <h2 class="judul"><u>USER ACCOUNT</u></h2>
+        </div>
+		<div class = "images2"></div>
+        <div class="artikel">
+        
+            
+				
+				<p>Username:<br>
+				<input type="text" name="user" ng-model="user" required>
+				<span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+				<span ng-show="myForm.user.$error.required"><font size=2>Username is required.</font></span>
+				</span>
+				</p><br>
+				
+                <p>Email:<br>
+				<input type="email" name="email" ng-model="email" required>
+				<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+				<span ng-show="myForm.email.$error.required"><font size=2>Email is required.</font></span>
+				<span ng-show="myForm.email.$error.email"><font size=2>Invalid email address.</font></span>
+				</span>
+				</p><br>
+				
+				<p>Password:<br>
+				<input type="password" name="password" ng-model="password" required>
+				<span style="color:red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+				<span ng-show="myForm.password.$error.required"><font size=2>Password is required.</font></span>
+				</span>
+				</p><br>
+				
+				 
+                <form action="####"><a href="Form.html">
+				<input type="button" value="sign in"></a>
+				<br><br>
+            </form>
+        </div>
+    </div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+    $scope.user = '';
+    $scope.email = '';
+	$scope.password = '';
+});
+</script>
+</body>
+</html>
